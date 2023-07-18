@@ -75,4 +75,4 @@ fi
 
 # Delete temp files
 # TODO: add option to keep temp files
-rm "$music_sr_file" "$cover_bw_file"
+# rm "$music_sr_file" "$cover_bw_file"
