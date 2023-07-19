@@ -36,6 +36,13 @@ if [ -z "$audio_input" ] || [ -z "$cover_input" ]; then
     show_help
 fi
 
+audio_ext="${audio_input##*.}"
+
+if [ "$audio_ext" != "mp3" ]; then
+    echo "Info: Converting audio file to mp3"
+    ffmpeg -v 5 -y -i $audio_input -acodec libmp3lame -ac 2 -ab 192k ${audio_input%.*}.mp3
+fi
+
 # Output file names
 music_sr_file="${audio_input%.*}_sr.mp3"
 cover_bw_file="${cover_input%.*}_bw.jpg"
