@@ -15,11 +15,14 @@ Please ensure that these dependencies are installed on your system before runnin
 ## Usage
 
 ```
-Usage: ./slowed-reverb.sh --audio-input (path_to_your_music_file) --cover-input (path_to_your_cover_file) [--output/-o (optional)]
+Usage: ./slowed-reverb.sh --audio-input (path_to_your_music_file) --cover-input (path_to_your_cover_file) [--output/-o (optional)] [--ffmpeg-opts (optional)] [--sox-opts (optional)] [--color-hue (optional)]
 Options:
   --audio-input, -a: Specify the input audio file.
   --cover-input, -c: Specify the input cover file (GIF, video, or image).
   --output, -o: Specify the output file. (optional)
+  --ffmpeg-opts: Additional options to pass to ffmpeg.
+  --sox-opts: Additional options to pass to sox.
+  --color-hue: Add random color hue to the grayscale image.
   --help, -h: Show this help message.
 ```
 
